@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 문자열</title>
+<script>
+var s='abc'; //자바스크립트 문자열을 작은 따옴표 ''로 처리 가능함.
+s="그는 '슈퍼맨'이라고 한다.";// "큰따옴표 안에 작은따옴표 문자열 처리도 가능하다. 
+document.write(s+"<br><br>");
+
+s="abc";
+document.write("'abc' 문자 길이 : "+s.length+"<hr/>"); //3
+
+//문자열 서로 연결해보기 
+
+var result="Hello "+"JavaScript"; //+는 문자열 연결 - Hello JavaScript
+document.write(result+"<hr/>");
+document.write("첫단일문자: "+result.charAt(0)+"<hr/>");//H
+document.write("e를 E로 변경: "+result.replace('e','E')+"<hr/>");//HEllo JavaScript
+document.write("대문자로 변경: "+result.toUpperCase()+"<hr/>");//HELLO JAVASCRIP
+</script>
+</head>
+<body>
+
+</body>
+</html>
