@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 논리연산자_삼항조건연산자_연산자 우선순위</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var x=3;
+var y=4;
+
+alert((x==3) && (y==7)); //true && false = false
+alert((x==3) || (y==5)); //true || false = true 
+
+var max_value=(x>y)?x:y; //3항조건연산자
+document.write("max_value = "+max_value+"<hr/>"); //4
+
+//연산자 우선순위 : 곱셈 연산이 덧셈 연산보다 우선한다. 
+//덧셈연산을 곱셈보다 먼저하고싶다면 덧셈연산에 ()를 해주면 된다. 
+
+var result=3+4*5; //23
+alert(result);
+
+//35가 나오게
+//var result=(3+4)*5;
+alert((3+4)*5);
+
+
+</script>
+</body>
+</html>

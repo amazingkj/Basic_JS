@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 if else if else 다중조건문 실습</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var msg;
+	var time=new Date().getHours(); /*Date()는 자바스크립트 날짜 객체이다. 이 객체 하위의 getHours()메서드는 현재 시간값을 반환.*/
+	
+	
+	if(time <12){
+		msg="Good Morning!";
+	}else if(time <18 ){
+		msg="Good Afternoon!";
+	}else {//18시 이후이면 
+		msg="Good Evening!"
+	}
+	
+	alert(msg);
+</script>
+
+</body>
+</html>
