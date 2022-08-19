@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function 키워드로 함수 정의 실습</title>
+<script type="text/javascript">
+function showDialog(){
+	alert('안녕하세요!'); //alert()는 window객체 하위의 메서드(또는 자바스크립트 내장 함수)로서 메시지를 담은 경고창을 만든다. 
+	//window.alert('안녕하세요!'); 와 같다. window는 기본 객체여서 생략 가능. 
+}
+
+function greeting(name,position){
+	alert(name+" "+position+"님을 환영합니다.");
+}
+
+</script>
+
+</head>
+<body>
+<button type="button" onclick="showDialog()">대화상자오픈</button>
+<input type="button" value="눌러보세요" onclick="greeting('홍길동','부장');" />
+
+</body>
+</html>

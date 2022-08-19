@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 폼 네임피라미터 이름을 활용한 입력박스 초기화 </title>
+</head>
+<body>
+<form name="myForm" method="post" action="#">
+입력필드 01: <input type="text" name="a0" /><br><br>  <!-- 이름을 01이 아니라 a0으로 한 이유에 주목! -->
+입력필드 02: <input type="text" name="a1" /><br><br>
+입력필드 03: <input type="text" name="a2" /><hr/>
+<input type="button" value="초기화" onclick="init();" />
+</form>
+<script>
+function init(){ //function 으로 init() 함수 정의
+	for(var i=0; i<3; i++) {
+		 document.myForm["a"+i].value=i+3;
+	}
+} //myForm[ ]을 통해서 a0, a1, a2 name 을 지정하여 호출
+//초기화 버튼을 누르면 value = 으로 지정한 값으로 초기화 됨 
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>break와 continue문 학습</title>
+</head>
+<body>
+<script type="text/javascript">
+var result="";
+for(i=1; i<=10; i++){
+	if(i==4){
+		break; //반복문 중단 
+	}
+	result += i+"<br/>";
+}
+document.write(result);
+document.write("<hr/>");
+
+result='';
+for(var j=1;j<=10;j++){
+	if(j%4==0){
+		continue;
+	}
+	result += j+"<br/>";
+}
+document.write(result+"<hr/>";
+
+
+</script>
+
+</body>
+</html>
