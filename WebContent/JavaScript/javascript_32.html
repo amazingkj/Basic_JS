@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>생성자 함수를 통한 사용자 정의 객체 만들기</title>
+</head>
+<body>
+<script>
+function Car(model,speed,color){
+	//Car라는 생성자 함수를 통한 사용자 정의 객체 생성
+	this.model=model; //왼쪽의 model은 Car객체의 속성, 오른쪽 model은 매개변수(전달인자)
+	this.speed=speed;
+	this.color=color;
+	
+	this.brake = function(){
+		this.speed -=10;
+		
+	}; //brake()메서드 정의 
+	
+	this.accel = function(){
+		this.speed +=10;
+	}//accel() 메서드 정의
+}//생성자 함수
+
+var myCar = new Car("아우디", 60, 'red'); //myCar라는 객체를 생성
+document.write("차모델 : "+myCar.model+", 속도 : "+myCar.speed+"<hr/>");
+myCar.accel();
+document.write("차속도 : "+myCar.speed+"<hr/>");
+myCar.brake();
+document.write("차속도 : "+myCar.speed+"<hr/>");
+
+
+</script>
+
+</body>
+</html>
