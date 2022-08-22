@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS 내장 객체 중 Date날짜 객체와 window 객체 하위 메서드 실습</title>
+<script>
+ var a; //전역변수 
+ 
+ function st(){
+	 t=new Date(); //날짜 객체 t생성 
+	 y=t.getFullYear(); //년도
+	 m=t.getMonth()+1; //월, +1을 한 이유는 자바와 같다. 1월이 0으로 반환되기 때문
+	 d=t.getDate(); //일
+	 h=t.getHours(); //시간
+	 mm=t.getMinutes();//분
+	 s=t.getSeconds();//초
+	 
+	 document.getElementById('clock').value=y+"년 "+m+"월 "+d+"일 "+h+"시 "+mm+"분 "+s+"초 입니다.";
+	 
+	 a.window.setTimeout('st()', 1000);//1초 간격으로 매번 st()함수를 호출해서 동작하는 시간값을 만든다.
+ }
+ 
+ function stop(){
+	 window.clearTimeout(a); //동작하는 시간값을 해제
+ } 
+</script>
+</head>
+<style>
+span.date_color{
+color:blue; font-size:15px; font-weight:bold;}
+
+</style>
+<body>
+<h2>시계 동작</h2>
+<button type = "button" onclick="st()">시계 동작</button>
+<input type = "button" value="시계멈춤" onclick="stop();" /><hr/>
+<span class = "date_color">날짜_시간값 출력 : </span><input type="text" id="clock" size="50" />
+</body>
+</html>
