@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 문자열 객체 하위의 메서드 실습</title>
+</head>
+<body>
+<script>
+ var s= "javascript";
+ document.write("'javascript' 문자열 길이: "+s.length+"<hr/>"); //문자열 길이는 첫 문자를 1부터 카운터
+ document.write("문자 'a'를 맨 왼쪽에서부터 찾아서 가장 먼저 나오는 해당 문자 위치번호 : "+
+		 s.indexOf('a')+'<hr/>'); //위치번호는 맨 왼쪽 첫문자를 0부터 카운터
+ document.write("문자 'a'를 맨 오른쪽에서 부터 찾아서 가장 먼저 나오는 해당 문자 위치번호를 왼쪽에서부터 카운터해서 반환 : "+s.lastIndexOf('a')+"<hr/>");
+ document.write("2이상 4미만 사이의 문자 반환 : "+s.substring(2,4)+"<hr/>");//첫 문자를 0부터 시작  va
+ document.write("2이후부터 마지막 문자까지 반환: "+s.substring(2)+'<hr/>'); //vascript
+ document.write("'java'를 '자바'로 변경 : "+s.replace('java','자바')+'<hr/>'); //자바script
+</script>
+</body>
+</html>
