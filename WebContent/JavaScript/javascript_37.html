@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문자열 객체의 메서드 중 영문 대소문자 변경과 문자 결합</title>
+</head>
+<body>
+<script>
+var s= 'aBcDeF';
+var result01= s.toLowerCase(); //영문소문자로 바꿔줌 
+var result02= s.toUpperCase(); //영문대문자로 바꿔줌
+
+document.write("영문 소문자 : "+result01+"<hr/>");
+document.write("영문 대문자 : "+result02+"<hr/>");
+document.write("s : "+s+"<hr/>");
+
+var s01="문자열 01 ";
+var s02="문자열 02 ";
+var s03=s01.concat(s02); //문자를 서로 연결, +문자열 연결 연산자를 사용한 것과 같은 효과가 난다.
+
+document.write(s03+'<hr/>');
+
+
+</script>
+
+</body>
+</html>
