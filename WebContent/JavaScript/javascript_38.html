@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문자열 객체의 replace()와 split()메서드</title>
+</head>
+<body>
+<script>
+var s="Hong's number is 123-4567";
+var result=s.replace("Hong's","Park's"); //Hong's 문자를 Park's로 변경
+
+document.write(result+"<hr/>");
+
+s="One,Two,Three,Four,Five";
+var array=s.split(","); //쉼표(,)를 기준으로 문자열을 분리해서, 분리된 문자를 배열로 반환한다.
+
+for (var i = 0; i < array.length; i++) {
+	document.write(i+" : "+array[i]+"<br/>");
+}
+
+
+</script>
+
+</body>
+</html>
