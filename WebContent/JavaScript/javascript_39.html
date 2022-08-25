@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array배열 내장 객체</title>
+<script>
+function printArray(arr){
+	document.write("[");
+	for(var i=0;i<arr.length;i++){
+		document.write(arr[i]+" ");		
+	}
+	document.write("]<hr/>"); 
+}
+
+var myArr01=new Array();
+myArr01[0]="apple"; myArr01[1]=100; myArr01[2]=100.30; 
+//자바스크립트 배열은 가변 배열이면서 복수개의 자료형을 동시 저장 가능 
+
+printArray(myArr01);
+
+var myArr02=new Array("서울시", '부산시', '인천시');
+printArray(myArr02);
+
+var myArr03=['홍길동',true,2000];
+printArray(myArr03);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
