@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 예외처리 try~catch문 (권장 안함)</title>
+<script>
+var msg='';
+
+function test(){
+	try{
+		allert("Hello World!"); //alert() 내장함수 오타 오류 발생 
+	}catch(error){
+		msg='다음과 같은 오류가 발생 : '+error.message;
+		alert(msg);
+	}
+}
+
+
+</script>
+</head>
+<body>
+<input type="button" value="try~catch 문" onclick="test();" />
+
+</body>
+</html>
