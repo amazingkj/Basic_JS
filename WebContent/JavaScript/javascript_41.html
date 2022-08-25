@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>try~catch문과 인위적 예외 발생(throw) => 프로젝트개발에서는 비 권장</title>
+<script>
+var numbers=53;
+
+function test(){
+	try{
+		var x=document.getElementById('number').value;
+		
+		if(x=='') throw '입력없음'; //throw로 인위적 예외발생
+		if(isNaN(x)) throw '숫자가 아님'; //isNaN은 Not a number의 약어로 숫자가 아니면 참 
+		if(x>numbers) throw '입력한 숫자가 큼';
+		if(x<numbers) throw '입력한 숫자가 작음';
+		if(x == numbers) throw '정답';
+	}catch(error){
+		var y=document.getElementById('message');
+		y.innerHTML="힌트: <strong>"+error+"</strong>"; 
+		//innerHTML속성은 문자와 태그를 함께 변경 적용함.		
+	}//try~catch문 
+	
+	//try~catch, throw는 JS에서 쓰지마세요!  java에서만 쓰세요. 물론 java에서도 throw 는 비권장함
+	
+}</script>
+
+</head>
+<body>
+<h1>숫자 추측</h1>
+<form>
+<p>1부터 100사이의 숫자를 입력하세요</p>
+<input type="text" id="number" size="10" />
+<input type="button" value="숫자추측" onclick="test()" />
+<p id='message'></p>
+
+
+</form>
+
+
+</body>
+</html>
