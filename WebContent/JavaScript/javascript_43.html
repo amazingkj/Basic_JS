@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>네임속성명(네임피라미터 이름)으로 접근</title>
+<script>
+function check(){
+	var obj=document.myform.name; //document.은 생략 가능 
+	alert(obj.value);
+	
+	window.alert(myform.name.value); //window.생략 가능 
+	
+	alert(myform.name.value);
+}
+</script>
+</head>
+<body>
+<form name="myform">
+이름 : <input type="text" name="name" size="14" />
+<input type="button" value="제출" onclick="check();" />
+</form>
+
+</body>
+</html>
