@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 변경 예제</title>
+<script type="text/javascript">
+function changecat(){
+	document.getElementById('image').src="../images/cat.jpg";
+}
+function changedog(){
+	document.getElementById('image').src="../images/dog.jpg";
+}
+</script>
+</head>
+<body>
+<img id="image" src="../images/dog.jpg" width="200" height="180" alt="이미지 변경"/>
+<hr/>
+<input type="button" value="고양이로 바꾸기" onclick="changecat();" />
+<input type="button" value="강아지로 바꾸기" onclick="changedog();" />
+
+</body> 
+</html>
