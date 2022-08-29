@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>클릭 이벤트 발생 후 특정영역 글자색, 글꼴, 글꼴스타일을 자바스크립트로 변경</title>
+</head>
+<body>
+<p id="part01">This is a paragraph.</p>
+<script>
+function changeStyle(){
+	document.getElementById('part01').style.color='red';//part01영역 글자색을 빨강으로 변경 
+	document.getElementById('part01').style.fontFamily='궁서체';//글꼴을 궁서체로 
+	document.getElementById('part01').style.fontStyle='italic';//글꼴 스타일을 기울임
+}
+</script>
+<form>
+<input type="button" value="자바스크립트로 CSS적용 예제" onclick="changeStyle();"/>
+
+</form>
+</body>
+</html>
