@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS로 본문 배경색 변경하기</title>
+<script>
+function changeColor(color){
+	document.getElementById('target').style.backgroundColor=color;//본문 배경색 
+	//
+}
+
+</script>
+</head>
+<body id="target">
+<form>
+<input type="radio" name="color" onclick="changeColor('lightblue')" /> 하늘색
+<input type="radio" name="color" onclick="changeColor('lightgreen')" /> 연두색
+
+</form>
+</body>
+</html>
