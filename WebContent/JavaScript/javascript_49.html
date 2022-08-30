@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 location객체를 활용한 원하는 곳으로 이동하기</title>
+<script>
+function url(){
+	location='http://www.daum.net'; //다음으로 이동
+}
+
+function url2(link){
+	alert(link);
+	location=link;//자바스크립트 내장객체인 location에 의해서 원하는 파일 또는 주소로 이동
+	
+}
+
+
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="네이버로 이동"
+onclick="window.location.href='http://www.naver.com';" />
+
+<!-- window.은 생략 가능, .href 속성은 주소정보를 담고 있다. 생략 가능함. -->
+<input type="button" value="한멜로 이동" onclick="url();" />
+<input type="button" value="구글로 이동" onclick="url2('http://www.google.co.kr');" />
+
+</form>
+
+</body>
+</html>
