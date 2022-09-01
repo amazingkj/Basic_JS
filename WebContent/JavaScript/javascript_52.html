@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onchange이벤트가 발생했을 때 영어단어를 소문자로 변경</title>
+<script type="text/javascript">
+
+function sub(){
+	var x=document.getElementById('name');
+	x.value=x.value.toLowerCase(); //입력필드에 입력한 영어단어를 소문자로 변경
+}
+
+</script>
+</head>
+<body>
+영어단어(대문자로 입력):<input type="text" id="name" onchange="sub();" />
+<p>입력필드를 벗어나면 영문소문자로 변경</p>
+
+</body>
+</html>
