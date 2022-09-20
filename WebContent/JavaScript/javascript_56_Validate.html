@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>데이터길이 유효성검증**(validate)</title>
+
+<script>
+function checkLength(elem,min,max){
+	var s=elem.value;
+	
+	if(s.length >= min && s.length <=max){
+		//length속성은 문자 길이를 반환. 첫문자는 1부터 시작. 6~8자 사이의 이름을 입력했다면 
+		f.submit(); //f는 폼태그 네임 피라미터(속성) 이름이다. 
+		//폼객체 하위의 submit()메서드에 의해서 자료를 서버로 전송
+	
+	}else {
+		alert(min+" 문자와 "+max+" 문자 사이로 입력해주세요!");
+		elem.value=''; //입력필도로 초기화
+		elem.focus(); //입력필드로 포커스 이동
+		return false; //데이터 전송을 안함. 폼전송을 안함. 
+	}
+	
+	}
+
+</script>
+</head>
+<body>
+
+<form name="f" method="post" action="server_ok.jsp">
+이름(6~8 문자): <input type="Text" id="name" size="14" />
+<input type="button" value="확인"
+onclick="checkLength(document.getElementById('name'),6,8);"/>
+</form>
+
+</body> 
+</html>

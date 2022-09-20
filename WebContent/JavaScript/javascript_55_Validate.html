@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>유효성 검증(validate)</title>
+<script type="text/javascript">
+
+function checkNotEmpty(field){
+	if(field.value.length==0){
+		//length속성은 문자열 길이를 반환, 첫문자를 1부터 시작 
+		window.alert('이름을 입력하세요!'); //window.은 생략 가능함. 
+		field.focus(); //입력필드로 포커스 이동 
+		return false; //폼전송을 안함. 
+	}
+	return true; //서버로 이름을 전송 =>폼전송, 서버로 자료 전송 
+	
+}
+
+</script>
+</head>
+<body>
+
+<form> <!-- method속성을 생략하면 기본값으로 get방식이다. -->
+이름 :<input type="text" id="name" size="14" />
+<input type="button" value="확인"
+onclick="checkNotEmpty(document.getElementById('name'));" />
+ 
+
+</form>
+
+</body>
+</html>
