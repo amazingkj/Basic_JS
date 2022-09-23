@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>두번째 유효성 검증 방법</title>
+<script type="text/javascript">
+
+function check() {
+	if(f.title.value.length == 0){
+		alert("글제목을 입력하세요!");
+		f.title.focus();
+		return false;
+	}
+	if(f.cont.value == ""){
+		alert("글내용을 입력하세요");
+		f.cont.focus();
+		return false;		
+	}
+}
+
+function reSet(){
+	f.reset(); //입력박스 초기화 
+	f.title.focus();
+}
+
+</script>
+</head>
+<body>
+<form name="f" method="post" action="validate_ok.jsp" onsubmit="return check();">
+<!-- 최근 10년 내에는 이 방법을 씀. onsubmit 이벤트 사용 -->
+<!-- onsubmit이벤트는 입력한 자료를 서버로 전송한다. -->
+ <h3>게시판 입력폼</h3>
+제목: <input type="text" name="title" size="38" />
+ <br><br>
+내용: <textarea rows="10" cols="36" name="cont" ></textarea>
+<!-- textarea 사이에 공백을 주면 textbox에 빈 공백이 기입되어서 전송된다. 꼭 붙여쓸 것 -->
+<!-- 보이지 않는 버그(에러)발생! 엔터키를 쳐서 다음 줄로 넘기지 말 것.<textarea></textarea> -->
+
+<hr/>
+<input type="submit" value="전송" />
+<input type="button" value="reset" onclick="reSet();" />
+<!-- input type="reset"으로 해도 되지만, 메서드로 한 번 작성해보았다. -->
+
+
+</form>
+</body>
+</html>

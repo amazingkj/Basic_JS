@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>과일 선택 유효성 검증</title>
+<script>
+function check(f){
+	
+	//f는 form을 가리킴
+	var a=f.answer.value; //답안을 저장
+	var b=a.toLowerCase();//영문소문자로 변경
+	
+	if(b=='b'){
+		alert('정답입니다. 가장 맛있는 과일은 수분이 풍부한 수박입니다. ');
+		
+	}else{
+		alert('잘못 선택했습니다.');
+		f.answer.value='';//입력박스를 초기화 
+		f.answer.focus();//입력필드로 포커스 이동
+	}
+		
+}
+
+</script>
+
+
+</head>
+<body>
+
+<form>
+<h2>다음 과일 중에서 가장 맛있는 과일은 무엇일까요?</h2>
+<hr/>
+a)복숭아 b)수박 c)사과 d)초코
+<br/>
+<input type="text" name="answer" size="10" />
+<br>
+<input type="button" value="확인" onclick="check(this.form);" />
+<!-- this.form은 폼 을 인자값으로 전달. this.form이 있으면 form name 지정 안해도 됨. -->
+
+</form>
+
+</body>
+</html>

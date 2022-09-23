@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>유효성 검증 첫번째 방법</title>
+<script>
+function check(){
+	if(window.document.f.writer.value == '' ){
+		//window.document.은 생략가능함. f는 폼태그 네임 피라미터 이름
+		window.alert('글쓴이를 입력하세요!'); //window. 생략 가능 
+		f.writer.focus();//글쓴이 입력 박스로 포커스 이동
+		return false;
+	}
+	
+	if(f.title.value.length == 0){
+		//length속성은 문자열 길이를 반환. 첫문자는 1부터 시작 
+		alert("제목을 입력하세요!");
+		f.title.focus();
+		return false;
+	}
+	f.submit();//f는 form을 가리킴. 폼객체 하위의 submit()메서드는 자료를 서버로 전송한다. 
+}
+
+</script>
+</head>
+<body>
+
+<form name="f" method="post" action="board_ok.jsp">
+<h3>방명록 글쓰기</h3>
+글쓴이 : <input type="text" name="writer" size="14" />
+<br><br>
+글제목 : <input type="text" name="title" size="36" />
+<hr>
+<input type="button" value="저장" onclick="check()" />
+<input type="Reset" value="취소" onclick="f.writer.focus();" />
+
+</form>
+
+</body>
+</html>

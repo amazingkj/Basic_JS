@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS 유효성 검증</title>
+<script>
+function check(){
+	s01=myform.irum.value.length; //이름 문자 길이, myform은 폼네임 피라미터 이름(폼 네임 속성명)
+	s02=myform.tel.value.length;
+	
+	if(s01 <=0) {
+		alert('이름을 입력하세요!');
+		window.document.myform.irum.focus(); //이름 입력박스로 포커스 이동
+		//window.document.는 생략가능함
+		return false
+	}else{
+		alert("당신의 이름은 "+myform.irum.value+"입니다.");
+	}
+	
+	
+	if(s02 <= 0){
+		window.alert('폰번호를 입력하세요!'); //window.은 생략 가능 
+		myform.tel.focus();
+		return false;
+	}else{
+		alert("당신의 폰번호는 "+myform.tel.value);
+	}
+}
+</script>
+</head>
+<body>
+<form name="myform">
+이름 : <input type="text" name="irum" size="14" /><br><br>
+폰번호 : <input type="text" name="tel" size="20" /><hr/>
+<input type="button" value="확인" onclick="check();" />
+<input type="reset" value="취소"  />
+
+
+
+</form>
+</body>
+</html>
