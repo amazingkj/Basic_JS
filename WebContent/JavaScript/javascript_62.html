@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>select를 통한 좋아하는 산 선택실습</title>
+<script>
+function view(form){
+	var i=form.san.selectedIndex; 
+	//콤보박스 목록에서 선택된 항목 번호, 첫번째가 0부터 시작 
+	alert("선택된 항목 번호 : "+i);
+	alert(form.san.options[i].value+"\n 선택했음");	//\n은 줄바꿈
+}
+
+</script>
+</head>
+<body>
+<form>
+<h3>가장 좋아하는 산을 선택: </h3>
+<select name="san">
+
+<option value="설악산">설악산</option>
+<option value="지리산">지리산</option>
+<option value="한라산">한라산</option>
+<option value="내장산">내장산</option>
+</select>
+<hr/>
+
+<input type="button" value="확인" onclick="view(this.form);">
+
+</form>
+
+</body>
+</html>

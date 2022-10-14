@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>select로 리스트박스 만든 후 직업 선택하기</title>
+<script>
+function check(f){//f는 form을 가리킴
+	var count=f.job.length;//job은  select네임 피라미터 이름, job은 select를 가리킴.
+	//length에서 select객체수를 반환 
+	
+	for(var i=0;i<count;i++){
+		if(f.job.options[i].selected == true){
+			//해당목록이 선택되었다면 참, == true이 생략 가능함.
+			alert(f.job.options[i].text+"이(가) 선택됨.");
+			//text속성은 브라우저에 출력되는 목록 항목 문자를 가져옴.
+		}
+	}
+}
+
+</script>
+</head>
+<body>
+<form>
+<h3>당신의 직업은?</h3>
+<select name="job" size="3" multiple>
+<!-- size="3"은 브라우저 화면에 보여지는 목록 개수, 
+multiple 속성은 동시에 여러개의 항목을 선택 가능(드래그)
+selected 속성을 사용하면 미리 선택됨.-->
+<option value="worker">회사원</option> 
+<option value="student">학생</option> 
+<option value="lawyer">법조인</option>
+</select>
+<br><br>
+<input type="button" value="확인" onclick="check(this.form);" />
+<!-- this는 form을 가리킴. -->
+
+</form>
+</body>
+</html>
